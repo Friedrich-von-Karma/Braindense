@@ -25,41 +25,41 @@ const getThumbnail = (id: number) => {
 }
 
 const mockContent = [
-  { id: 1, title: 'Crimson Whispers', creator: 'Velvet Studios', views: '24K', duration: '18:42', likes: '2.1K', premium: true },
-  { id: 2, title: 'Neural Embrace v2.1', creator: 'SynthDev_Marcus', views: '18K', duration: '22:15', likes: '1.8K', premium: false },
-  { id: 3, title: 'After Hours', creator: 'Noir Collective', views: '32K', duration: '15:30', likes: '3.2K', premium: true },
-  { id: 4, title: 'AI Companion: Luna', creator: 'PixelDream Labs', views: '28K', duration: '20:00', likes: '2.5K', premium: false },
-  { id: 5, title: 'Golden Shadows', creator: 'Amateur Hour Films', views: '15K', duration: '25:10', likes: '1.2K', premium: true },
-  { id: 6, title: 'Simulation Alpha', creator: 'dev_sarah_ai', views: '42K', duration: '19:45', likes: '4.1K', premium: false },
-  { id: 7, title: 'Midnight in Paris', creator: 'EroticaVerse', views: '19K', duration: '21:30', likes: '1.9K', premium: true },
-  { id: 8, title: 'Synthetic Dreams', creator: 'NeonByte Interactive', views: '35K', duration: '17:20', likes: '3.5K', premium: false },
+  { id: 1, title: 'Sunlit Morning', creator: 'Elena Voss', views: '24K', duration: '18:42', likes: '2.1K', description: 'A tender moment captured in golden morning light' },
+  { id: 2, title: 'The Letter', creator: 'James & Sofia', views: '18K', duration: '22:15', likes: '1.8K', description: 'Two lovers reunite after months apart' },
+  { id: 3, title: 'Room 212', creator: 'Mia Laurent', views: '32K', duration: '15:30', likes: '3.2K', description: 'A chance encounter at a boutique hotel' },
+  { id: 4, title: 'Slow Dance', creator: 'The Arthouse', views: '28K', duration: '20:00', likes: '2.5K', description: 'Beautifully filmed with natural candlelight' },
+  { id: 5, title: 'Summer Rain', creator: 'Ava & Lucas', views: '15K', duration: '25:10', likes: '1.2K', description: 'Passion ignites during a sudden downpour' },
+  { id: 6, title: 'The Photographer', creator: 'Noir Films', views: '42K', duration: '19:45', likes: '4.1K', description: 'A model and her photographer blur the lines' },
+  { id: 7, title: 'Midnight Call', creator: 'Isabella Ray', views: '19K', duration: '21:30', likes: '1.9K', description: 'A late night conversation turns intimate' },
+  { id: 8, title: 'Venice Nights', creator: 'Studio Elegance', views: '35K', duration: '17:20', likes: '3.5K', description: 'Romance unfolds in a historic palazzo' },
 ]
 
 const communityPosts = [
-  { id: 1, user: 'PixelDream Labs', avatar: 'P', content: 'Just released AI Companion v3.0 - now with haptic sync and mood detection. Feedback welcome!', likes: 234, comments: 45, time: '2h ago', verified: true },
-  { id: 2, user: 'dev_sarah_ai', avatar: 'S', content: 'Working on a new neural simulation. This one learns your preferences in real-time. Beta testers needed!', likes: 567, comments: 89, time: '4h ago', verified: true },
-  { id: 3, user: 'Noir Collective', avatar: 'N', content: 'Behind the scenes from our latest amateur shoot. Raw, authentic, unscripted moments.', likes: 1200, comments: 156, time: '6h ago', verified: false },
+  { id: 1, user: 'Elena Voss', avatar: 'E', content: 'Just wrapped filming on my new piece. The lighting came out absolutely stunning - cannot wait to share it with you all next week.', likes: 234, comments: 45, time: '2h ago', verified: true },
+  { id: 2, user: 'Studio Elegance', avatar: 'S', content: 'Behind the scenes from our Venice shoot. The palazzo was breathtaking at sunset. Full release coming Friday.', likes: 567, comments: 89, time: '4h ago', verified: true },
+  { id: 3, user: 'Ava & Lucas', avatar: 'A', content: 'Thank you everyone for 50K views on Summer Rain! Your support means everything to us. More coming soon.', likes: 1200, comments: 156, time: '6h ago', verified: false },
 ]
 
 const groups = [
-  { id: 1, name: 'AI Developers Hub', members: '12.4K', activity: 'Very Active' },
-  { id: 2, name: 'Device Sync Tips', members: '8.2K', activity: 'Active' },
-  { id: 3, name: 'Indie Creators', members: '5.6K', activity: 'Active' },
-  { id: 4, name: 'Studio Network', members: '3.1K', activity: 'Exclusive' },
+  { id: 1, name: 'Filmmaking Tips', members: '12.4K', activity: 'Very Active' },
+  { id: 2, name: 'Lighting & Mood', members: '8.2K', activity: 'Active' },
+  { id: 3, name: 'Couples Corner', members: '5.6K', activity: 'Active' },
+  { id: 4, name: 'Art Directors', members: '3.1K', activity: 'Exclusive' },
 ]
 
 const communities = [
-  { id: 1, name: 'Amateur Filmmakers', members: '45K', description: 'Real couples, authentic content', online: 234 },
-  { id: 2, name: 'AI Simulation Dev', members: '28K', description: 'Build & share neural experiences', online: 156 },
-  { id: 3, name: 'Interactive Creators', members: '67K', description: 'Games, apps & immersive tech', online: 892 },
+  { id: 1, name: 'Independent Creators', members: '45K', description: 'Share your work and get feedback', online: 234 },
+  { id: 2, name: 'Cinematography', members: '28K', description: 'Discuss lighting, angles, and mood', online: 156 },
+  { id: 3, name: 'New Releases', members: '67K', description: 'First looks and premieres', online: 892 },
 ]
 
 const featuredContent = [
-  { id: 101, title: 'Echo Chamber', creator: 'Obsidian Productions', views: '156K', duration: '32:15', likes: '24K', description: 'Award-winning studio production with full device integration' },
-  { id: 102, title: 'Neural Link Experience', creator: 'solo_dev_mike', views: '98K', duration: '45:00', likes: '18K', description: 'Indie AI simulation that adapts to your responses in real-time' },
-  { id: 103, title: 'Apartment 4B', creator: 'Real Couples Co.', views: '234K', duration: '28:30', likes: '32K', description: 'Authentic amateur footage from verified couples' },
-  { id: 104, title: 'Sentient v4.2', creator: 'NeonByte Interactive', views: '87K', duration: '38:45', likes: '15K', description: 'Next-gen AI companion with emotional intelligence engine' },
-  { id: 105, title: 'The Red Room', creator: 'Velvet Studios', views: '112K', duration: '26:20', likes: '19K', description: 'Professional cinematography meets intimate storytelling' },
+  { id: 101, title: 'The Last Train', creator: 'Mia Laurent', views: '156K', duration: '32:15', likes: '24K', description: 'Two strangers share an unforgettable journey through the French countryside' },
+  { id: 102, title: 'Canvas', creator: 'The Arthouse', views: '98K', duration: '45:00', likes: '18K', description: 'An artist finds inspiration in her newest muse. Stunningly shot in natural light.' },
+  { id: 103, title: 'After the Party', creator: 'James & Sofia', views: '234K', duration: '28:30', likes: '32K', description: 'The night continues after everyone else has gone home' },
+  { id: 104, title: 'Silk', creator: 'Isabella Ray', views: '87K', duration: '38:45', likes: '15K', description: 'Elegance and desire intertwine in this visually stunning piece' },
+  { id: 105, title: 'The Weekend', creator: 'Noir Films', views: '112K', duration: '26:20', likes: '19K', description: 'A couple escapes to the coast. Intimate and beautifully composed.' },
 ]
 
 // Content Card Component
@@ -144,10 +144,20 @@ function ContentCard({ item }: { item: typeof mockContent[0] }) {
           color: '#C9A962',
           fontSize: '0.85rem',
           fontWeight: 500,
-          marginBottom: '10px',
+          marginBottom: '6px',
           fontFamily: 'Inter, sans-serif'
         }}>
           {item.creator}
+        </p>
+        
+        <p className="line-clamp-1" style={{
+          color: 'rgba(255,255,255,0.5)',
+          fontSize: '0.8rem',
+          marginBottom: '10px',
+          fontFamily: 'Inter, sans-serif',
+          lineHeight: 1.4
+        }}>
+          {item.description}
         </p>
         
         <div style={{
