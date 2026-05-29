@@ -15,7 +15,7 @@ export default function Footer() {
               </div>
               <span style={{fontFamily:'Playfair Display,serif',color:'var(--gold)',fontWeight:700,fontSize:'1rem',letterSpacing:'0.2em',textTransform:'uppercase'}}>BlackDesire</span>
             </div>
-            <p style={{color:'rgba(245,240,255,0.25)',fontSize:'0.8rem',lineHeight:1.75}}>
+            <p style={{color:'rgba(250,250,250,0.45)',fontSize:'0.8rem',lineHeight:1.75}}>
               The immersive intimate wellness platform. AI-powered. Device-synced. Community-driven.
             </p>
           </div>
@@ -24,7 +24,7 @@ export default function Footer() {
               <h4 style={{color:'var(--gold)',fontSize:'0.65rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.15em',marginBottom:'18px'}}>{col.title}</h4>
               <ul style={{listStyle:'none',display:'flex',flexDirection:'column',gap:'10px'}}>
                 {col.links.map(l=>(
-                  <li key={l}><a href="#" style={{color:'rgba(245,240,255,0.28)',fontSize:'0.8rem',textDecoration:'none',transition:'color 0.2s'}}>{l}</a></li>
+                  <li key={l}><a href="#" style={{color:'rgba(250,250,250,0.45)',fontSize:'0.8rem',textDecoration:'none',transition:'color 0.2s'}}>{l}</a></li>
                 ))}
               </ul>
             </div>
@@ -32,10 +32,10 @@ export default function Footer() {
         </div>
         <div className="divider-gold" style={{marginBottom:'24px'}} />
         <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:'12px'}}>
-          <p style={{color:'rgba(245,240,255,0.2)',fontSize:'0.75rem'}}>© 2026 BlackDesire. All rights reserved. Platform for adults 18+ only.</p>
+          <p style={{color:'rgba(250,250,250,0.4)',fontSize:'0.75rem'}}>© 2026 BlackDesire. All rights reserved. Platform for adults 18+ only.</p>
           <div style={{display:'flex',gap:'20px'}}>
             {['Privacy','Terms','Cookies'].map(l=>(
-              <a key={l} href="#" style={{color:'rgba(245,240,255,0.2)',fontSize:'0.75rem',textDecoration:'none'}}>{l}</a>
+              <a key={l} href="#" style={{color:'rgba(250,250,250,0.4)',fontSize:'0.75rem',textDecoration:'none'}}>{l}</a>
             ))}
           </div>
         </div>

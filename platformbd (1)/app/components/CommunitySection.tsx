@@ -19,7 +19,7 @@ export default function CommunitySection() {
             <h2 style={{fontFamily:'Playfair Display,serif',color:'white',fontSize:'clamp(1.8rem,4vw,2.8rem)',fontWeight:900,marginBottom:'16px'}}>
               Share Your <span className="text-gold-shimmer">Desire</span>
             </h2>
-            <p style={{color:'rgba(245,240,255,0.45)',maxWidth:'520px',margin:'0 auto 32px',fontSize:'0.9rem',lineHeight:1.75}}>
+            <p style={{color:'rgba(250,250,250,0.6)',maxWidth:'520px',margin:'0 auto 32px',fontSize:'0.9rem',lineHeight:1.75}}>
               Upload your content, create immersive experiences, and build your audience on the only platform that truly syncs with your devices. Your creativity. Your community.
             </p>
             <div style={{display:'flex',flexWrap:'wrap',justifyContent:'center',gap:'14px'}}>
@@ -40,7 +40,7 @@ export default function CommunitySection() {
                 {f.icon}
               </div>
               <h3 style={{fontFamily:'Playfair Display,serif',color:'white',fontWeight:700,marginBottom:'10px'}}>{f.title}</h3>
-              <p style={{color:'rgba(245,240,255,0.4)',fontSize:'0.85rem',lineHeight:1.7}}>{f.desc}</p>
+              <p style={{color:'rgba(250,250,250,0.55)',fontSize:'0.85rem',lineHeight:1.7}}>{f.desc}</p>
             </div>
           ))}
         </div>
