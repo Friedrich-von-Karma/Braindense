@@ -47,7 +47,7 @@ const communities = [
 
 function ContentCard({ item }: { item: typeof mockContent[0] }) {
   return (
-    <div style={{minWidth:'220px',maxWidth:'220px',borderRadius:'6px',overflow:'hidden',background:'#0A0A0A',cursor:'pointer',transition:'all 0.3s'}} className="card-glow">
+    <div style={{minWidth:'220px',maxWidth:'220px',borderRadius:'6px',overflow:'hidden',background:'#111111',cursor:'pointer',transition:'all 0.3s'}} className="card-glow">
       <div style={{position:'relative',aspectRatio:'16/9',background:'linear-gradient(135deg, #1a0828 0%, #0d0010 100%)',border:'2px solid rgba(255,255,255,0.25)',borderRadius:'6px 6px 0 0',overflow:'hidden'}}>
         <Image 
           src={`/thumbn/${item.id}.jpg`}
@@ -80,15 +80,15 @@ function ContentCard({ item }: { item: typeof mockContent[0] }) {
 
 function ContentRow({ title, items, icon: Icon }: { title: string, items: typeof mockContent, icon?: any }) {
   return (
-    <div style={{marginBottom:'40px'}}>
+    <div style={{marginBottom:'24px',background:'#0A0A0A',borderRadius:'12px',padding:'24px'}}>
       <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:'20px'}}>
         <h2 style={{color:'white',fontSize:'1.15rem',fontWeight:700,fontFamily:'Playfair Display, serif',display:'flex',alignItems:'center',gap:'10px'}}>
           {Icon && <Icon size={18} style={{color:'#D4B65A'}} />}
           <span style={{color:'#D4B65A'}}>//</span> {title}
         </h2>
-        <button style={{color:'rgba(255,255,255,0.5)',fontSize:'0.8rem',background:'none',border:'1px solid rgba(255,255,255,0.15)',padding:'6px 14px',borderRadius:'4px',cursor:'pointer',transition:'all 0.2s'}}
-          onMouseOver={(e) => { e.currentTarget.style.borderColor = 'rgba(212,182,90,0.5)'; e.currentTarget.style.color = '#D4B65A' }}
-          onMouseOut={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)'; e.currentTarget.style.color = 'rgba(255,255,255,0.5)' }}
+        <button style={{color:'rgba(255,255,255,0.5)',fontSize:'0.8rem',background:'none',border:'none',padding:'6px 14px',borderRadius:'4px',cursor:'pointer',transition:'all 0.2s'}}
+          onMouseOver={(e) => { e.currentTarget.style.color = '#D4B65A' }}
+          onMouseOut={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.5)' }}
         >View All</button>
       </div>
       <div style={{display:'flex',gap:'16px',overflowX:'auto',paddingBottom:'12px',scrollbarWidth:'thin'}}>
@@ -100,7 +100,7 @@ function ContentRow({ title, items, icon: Icon }: { title: string, items: typeof
 
 function CommunityPost({ post }: { post: typeof communityPosts[0] }) {
   return (
-    <div style={{background:'#0A0A0A',borderRadius:'8px',padding:'16px',marginBottom:'12px'}}>
+    <div style={{background:'#111111',borderRadius:'8px',padding:'16px',marginBottom:'12px'}}>
       <div style={{display:'flex',alignItems:'center',gap:'12px',marginBottom:'12px'}}>
         <div style={{width:'40px',height:'40px',borderRadius:'50%',background:'linear-gradient(135deg, #8F3FD4, #D4B65A)',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:700,color:'white',fontSize:'1rem'}}>{post.avatar}</div>
         <div>
@@ -119,9 +119,9 @@ function CommunityPost({ post }: { post: typeof communityPosts[0] }) {
 
 function GroupCard({ group }: { group: typeof groups[0] }) {
   return (
-    <div style={{background:'#0A0A0A',borderRadius:'6px',padding:'14px',minWidth:'180px',cursor:'pointer',transition:'all 0.2s'}}
-      onMouseOver={(e) => e.currentTarget.style.background = 'rgba(212,182,90,0.08)'}
-      onMouseOut={(e) => e.currentTarget.style.background = '#0A0A0A'}
+    <div style={{background:'#111111',borderRadius:'6px',padding:'14px',minWidth:'180px',cursor:'pointer',transition:'all 0.2s'}}
+      onMouseOver={(e) => e.currentTarget.style.background = '#181818'}
+      onMouseOut={(e) => e.currentTarget.style.background = '#111111'}
     >
       <h4 style={{color:'white',fontWeight:700,fontSize:'0.9rem',marginBottom:'8px'}}>{group.name}</h4>
       <div style={{display:'flex',alignItems:'center',gap:'12px',color:'rgba(255,255,255,0.5)',fontSize:'0.75rem'}}>
@@ -134,9 +134,9 @@ function GroupCard({ group }: { group: typeof groups[0] }) {
 
 function CommunityCard({ community }: { community: typeof communities[0] }) {
   return (
-    <div style={{background:'linear-gradient(135deg, rgba(143,63,212,0.15), rgba(212,182,90,0.05))',borderRadius:'8px',padding:'18px',minWidth:'200px',cursor:'pointer',transition:'all 0.2s'}}
-      onMouseOver={(e) => e.currentTarget.style.background = 'linear-gradient(135deg, rgba(143,63,212,0.25), rgba(212,182,90,0.1))'}
-      onMouseOut={(e) => e.currentTarget.style.background = 'linear-gradient(135deg, rgba(143,63,212,0.15), rgba(212,182,90,0.05))'}
+    <div style={{background:'#111111',borderRadius:'8px',padding:'18px',minWidth:'200px',cursor:'pointer',transition:'all 0.2s'}}
+      onMouseOver={(e) => e.currentTarget.style.background = '#181818'}
+      onMouseOut={(e) => e.currentTarget.style.background = '#111111'}
     >
       <h4 style={{color:'white',fontWeight:700,fontSize:'0.95rem',marginBottom:'6px'}}>{community.name}</h4>
       <p style={{color:'rgba(255,255,255,0.5)',fontSize:'0.8rem',marginBottom:'10px'}}>{community.description}</p>
@@ -165,8 +165,7 @@ export default function MainPage() {
         left:0,
         height:'100vh',
         width:'300px',
-        background:'#050505',
-        borderRight:'1px solid rgba(255,255,255,0.1)',
+        background:'#0A0A0A',
         zIndex:50,
         transform: sidebarOpen ? 'translateX(0)' : 'translateX(-100%)',
         transition:'transform 0.3s ease',
@@ -202,7 +201,7 @@ export default function MainPage() {
             })}
           </nav>
           
-          <div style={{marginTop:'32px',paddingTop:'24px',borderTop:'1px solid rgba(255,255,255,0.1)'}}>
+          <div style={{marginTop:'32px',paddingTop:'24px'}}>
             <h3 style={{color:'rgba(255,255,255,0.5)',fontSize:'0.75rem',fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase',marginBottom:'16px'}}>Quick Links</h3>
             <div style={{display:'flex',flexDirection:'column',gap:'8px'}}>
               {['Trending Now', 'Top Rated', 'New Releases', 'Following'].map(link => (
@@ -217,7 +216,7 @@ export default function MainPage() {
       </aside>
 
       {/* Top Navigation */}
-      <header style={{position:'sticky',top:0,zIndex:30,background:'rgba(0,0,0,0.98)',backdropFilter:'blur(24px)',borderBottom:'1px solid rgba(255,255,255,0.1)'}}>
+      <header style={{position:'sticky',top:0,zIndex:30,background:'#080808',backdropFilter:'blur(24px)'}}>
         <div style={{display:'flex',alignItems:'center',gap:'16px',padding:'14px 28px'}}>
           {/* Menu button */}
           <button onClick={() => setSidebarOpen(true)} style={{background:'none',border:'1px solid rgba(255,255,255,0.15)',color:'white',cursor:'pointer',padding:'10px',borderRadius:'6px',display:'flex',alignItems:'center',justifyContent:'center',transition:'all 0.2s'}}
@@ -291,9 +290,9 @@ export default function MainPage() {
         <ContentRow title="Newest" items={[...mockContent].sort(() => Math.random() - 0.5)} icon={Star} />
 
         {/* Communities & Groups Section */}
-        <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'32px',marginTop:'16px',marginBottom:'40px'}}>
+        <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'24px',marginBottom:'24px'}}>
           {/* Communities */}
-          <div>
+          <div style={{background:'#0A0A0A',borderRadius:'12px',padding:'24px'}}>
             <h2 style={{color:'white',fontSize:'1.15rem',fontWeight:700,fontFamily:'Playfair Display, serif',display:'flex',alignItems:'center',gap:'10px',marginBottom:'20px'}}>
               <Users size={18} style={{color:'#8F3FD4'}} />
               <span style={{color:'#D4B65A'}}>//</span> Communities
@@ -304,7 +303,7 @@ export default function MainPage() {
           </div>
 
           {/* Groups */}
-          <div>
+          <div style={{background:'#0A0A0A',borderRadius:'12px',padding:'24px'}}>
             <h2 style={{color:'white',fontSize:'1.15rem',fontWeight:700,fontFamily:'Playfair Display, serif',display:'flex',alignItems:'center',gap:'10px',marginBottom:'20px'}}>
               <MessageCircle size={18} style={{color:'#8F3FD4'}} />
               <span style={{color:'#D4B65A'}}>//</span> Groups
@@ -316,7 +315,7 @@ export default function MainPage() {
         </div>
 
         {/* Community Posts */}
-        <div style={{marginBottom:'40px'}}>
+        <div style={{marginBottom:'24px',background:'#0A0A0A',borderRadius:'12px',padding:'24px'}}>
           <h2 style={{color:'white',fontSize:'1.15rem',fontWeight:700,fontFamily:'Playfair Display, serif',display:'flex',alignItems:'center',gap:'10px',marginBottom:'20px'}}>
             <MessageCircle size={18} style={{color:'#D4B65A'}} />
             <span style={{color:'#D4B65A'}}>//</span> Community Feed
