@@ -34,13 +34,13 @@ export default function FeaturedCreators() {
                 )}
               </div>
               <h3 style={{fontFamily:'Playfair Display,serif',color:'white',fontWeight:700,fontSize:'0.9rem',marginBottom:'3px'}}>{c.name}</h3>
-              <p style={{color:'rgba(245,240,255,0.35)',fontSize:'0.75rem',marginBottom:'14px'}}>{c.specialty}</p>
+              <p style={{color:'rgba(250,250,250,0.55)',fontSize:'0.75rem',marginBottom:'14px'}}>{c.specialty}</p>
               <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:'16px',fontSize:'0.72rem'}}>
-                <span style={{display:'flex',alignItems:'center',gap:'4px',color:'rgba(245,240,255,0.4)'}}><Users size={10}/>{c.followers}</span>
+                <span style={{display:'flex',alignItems:'center',gap:'4px',color:'rgba(250,250,250,0.6)'}}><Users size={10}/>{c.followers}</span>
                 <span style={{display:'flex',alignItems:'center',gap:'4px',color:'var(--gold)'}}><Star size={10} style={{fill:'var(--gold)'}}/>{c.rating}</span>
-                <span style={{display:'flex',alignItems:'center',gap:'4px',color:'rgba(245,240,255,0.4)'}}><Play size={10}/>{c.content}</span>
+                <span style={{display:'flex',alignItems:'center',gap:'4px',color:'rgba(250,250,250,0.6)'}}><Play size={10}/>{c.content}</span>
               </div>
-              <button style={{width:'100%',textAlign:'center',fontSize:'0.65rem',fontWeight:700,color:'rgba(201,168,76,0.5)',textTransform:'uppercase',letterSpacing:'0.12em',border:'1px solid rgba(201,168,76,0.2)',padding:'7px',borderRadius:'2px',background:'transparent',cursor:'pointer',transition:'all 0.2s'}}>
+              <button style={{width:'100%',textAlign:'center',fontSize:'0.65rem',fontWeight:700,color:'rgba(212,182,90,0.75)',textTransform:'uppercase',letterSpacing:'0.12em',border:'1px solid rgba(212,182,90,0.3)',padding:'7px',borderRadius:'2px',background:'transparent',cursor:'pointer',transition:'all 0.2s'}}>
                 Follow
               </button>
             </div>

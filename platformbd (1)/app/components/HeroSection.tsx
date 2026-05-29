@@ -39,7 +39,7 @@ export default function HeroSection() {
             Desire.
           </h1>
 
-          <p style={{color:'rgba(245,240,255,0.45)',fontSize:'0.9rem',lineHeight:1.8,marginBottom:'36px',maxWidth:'420px'}}>
+          <p style={{color:'rgba(250,250,250,0.65)',fontSize:'0.95rem',lineHeight:1.8,marginBottom:'36px',maxWidth:'420px'}}>
             The platform where your BlackDesire devices sync with immersive content. Explore curated experiences, create your own, and connect with a community that understands pleasure without limits.
           </p>
 
@@ -57,7 +57,7 @@ export default function HeroSection() {
             {[{v:'24K+',l:'Creators'},{v:'180K+',l:'Experiences'},{v:'3',l:'Devices'}].map(s => (
               <div key={s.l}>
                 <div style={{fontFamily:'Playfair Display,serif',fontSize:'1.8rem',fontWeight:700,color:'var(--gold)'}}>{s.v}</div>
-                <div style={{color:'rgba(245,240,255,0.35)',fontSize:'0.65rem',textTransform:'uppercase',letterSpacing:'0.15em',marginTop:'2px'}}>{s.l}</div>
+                <div style={{color:'rgba(250,250,250,0.55)',fontSize:'0.65rem',textTransform:'uppercase',letterSpacing:'0.15em',marginTop:'2px'}}>{s.l}</div>
               </div>
             ))}
           </div>
@@ -83,7 +83,7 @@ export default function HeroSection() {
             </div>
             <div style={{position:'absolute',bottom:0,left:0,right:0,padding:'14px'}}>
               <div style={{fontFamily:'Playfair Display,serif',color:'white',fontWeight:700,fontSize:'0.9rem'}}>Featured Experience</div>
-              <div style={{color:'rgba(255,255,255,0.45)',fontSize:'0.75rem',marginTop:'3px'}}>Device-synced · 24 min · 4K</div>
+              <div style={{color:'rgba(255,255,255,0.6)',fontSize:'0.75rem',marginTop:'3px'}}>Device-synced · 24 min · 4K</div>
             </div>
           </div>
 
@@ -96,7 +96,7 @@ export default function HeroSection() {
               <div key={f.label} className="card-glow" style={{padding:'14px',borderRadius:'2px',border:'1px solid rgba(201,168,76,0.12)',background:'rgba(255,255,255,0.02)'}}>
                 <div style={{color:'var(--gold)',marginBottom:'10px'}}>{f.icon}</div>
                 <div style={{color:'white',fontSize:'0.75rem',fontWeight:700,marginBottom:'4px'}}>{f.label}</div>
-                <div style={{color:'rgba(245,240,255,0.35)',fontSize:'0.7rem'}}>{f.desc}</div>
+                <div style={{color:'rgba(250,250,250,0.55)',fontSize:'0.7rem'}}>{f.desc}</div>
               </div>
             ))}
           </div>

@@ -24,7 +24,7 @@ export default function ContentGrid({category}:{category:string}) {
           <h2 style={{fontFamily:'Playfair Display,serif',color:'white',fontSize:'1.4rem',fontWeight:700}}>
             {category==='All'?'Featured Experiences':category}
           </h2>
-          <p style={{color:'rgba(245,240,255,0.3)',fontSize:'0.7rem',marginTop:'4px',textTransform:'uppercase',letterSpacing:'0.1em'}}>{items.length} experiences available</p>
+          <p style={{color:'rgba(250,250,250,0.5)',fontSize:'0.7rem',marginTop:'4px',textTransform:'uppercase',letterSpacing:'0.1em'}}>{items.length} experiences available</p>
         </div>
         <button className="btn-outline-gold" style={{padding:'8px 16px',borderRadius:'2px',fontSize:'0.7rem'}}>View All</button>
       </div>
@@ -65,16 +65,16 @@ function Card({item}:{item:typeof contents[0]}) {
           </div>
         )}
       </div>
-      <div style={{padding:'12px',background:'rgba(10,0,15,0.95)'}}>
+      <div style={{padding:'12px',background:'rgba(15,5,24,0.98)'}}>
         <div style={{display:'flex',gap:'6px',marginBottom:'6px',flexWrap:'wrap'}}>
-          {item.tags.map(t=><span key={t} style={{color:'rgba(155,77,232,0.7)',fontSize:'0.6rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em'}}>{t}</span>)}
+          {item.tags.map(t=><span key={t} style={{color:'rgba(176,106,245,0.9)',fontSize:'0.6rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em'}}>{t}</span>)}
         </div>
         <h3 style={{fontFamily:'Playfair Display,serif',color:'white',fontSize:'0.85rem',fontWeight:700,lineHeight:1.3,marginBottom:'8px'}} className="line-clamp-2">{item.title}</h3>
         <div style={{display:'flex',alignItems:'center',justifyContent:'space-between'}}>
-          <span style={{color:'rgba(201,168,76,0.6)',fontSize:'0.75rem',fontWeight:600}}>{item.creator}</span>
-          <div style={{display:'flex',alignItems:'center',gap:'10px',color:'rgba(245,240,255,0.3)',fontSize:'0.72rem'}}>
+          <span style={{color:'rgba(212,182,90,0.85)',fontSize:'0.75rem',fontWeight:600}}>{item.creator}</span>
+          <div style={{display:'flex',alignItems:'center',gap:'10px',color:'rgba(250,250,250,0.5)',fontSize:'0.72rem'}}>
             <span style={{display:'flex',alignItems:'center',gap:'3px'}}><Eye size={10}/>{item.views}</span>
-            <button style={{background:'none',border:'none',cursor:'pointer',color:'rgba(245,240,255,0.3)',padding:0,display:'flex'}}><Heart size={12}/></button>
+            <button style={{background:'none',border:'none',cursor:'pointer',color:'rgba(250,250,250,0.5)',padding:0,display:'flex'}}><Heart size={12}/></button>
           </div>
         </div>
       </div>
