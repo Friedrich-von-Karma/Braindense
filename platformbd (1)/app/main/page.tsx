@@ -1,7 +1,7 @@
 'use client'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
-import { Search, User, Bell, Mail, Library, Menu, X, Play, Gamepad2, Film, AppWindow, Music, BookOpen, Sparkles, Heart, Eye, Users, MessageCircle, Clock, TrendingUp, Star, ChevronRight, Upload, Settings, History, Bookmark, Flame } from 'lucide-react'
+import { Search, User, Bell, Mail, Library, Menu, X, Play, Gamepad2, Film, AppWindow, Music, BookOpen, Sparkles, Heart, Eye, Users, MessageCircle, Clock, TrendingUp, Star, ChevronRight, Upload, Settings, History, Bookmark, Flame, Zap, ChevronLeft } from 'lucide-react'
 
 const categories = [
   { name: 'Videos', icon: Play },
@@ -43,6 +43,14 @@ const communities = [
   { id: 1, name: 'Midnight Creators', members: '45K', description: 'Top creators sharing tips', online: 234 },
   { id: 2, name: 'Tech & Toys', members: '28K', description: 'Device discussions & reviews', online: 156 },
   { id: 3, name: 'New Explorers', members: '67K', description: 'Beginners welcome here', online: 892 },
+]
+
+const featuredContent = [
+  { id: 101, title: 'Midnight Symphony', creator: 'Luna Eclipse', views: '156K', duration: '32:15', likes: '24K', description: 'An immersive journey through the senses' },
+  { id: 102, title: 'Velvet Dreams Collection', creator: 'Scarlet Rose', views: '98K', duration: '45:00', likes: '18K', description: 'Premium exclusive series' },
+  { id: 103, title: 'Electric Paradise', creator: 'Neon Vixen', views: '234K', duration: '28:30', likes: '32K', description: 'Award-winning experience' },
+  { id: 104, title: 'Golden Hour Special', creator: 'Amber Sky', views: '87K', duration: '38:45', likes: '15K', description: 'Limited time feature' },
+  { id: 105, title: 'Silk Whispers', creator: 'Velvet Dreams', views: '112K', duration: '26:20', likes: '19K', description: 'Most anticipated release' },
 ]
 
 // Content Card Component
@@ -429,6 +437,257 @@ function CommunityCard({ community }: { community: typeof communities[0] }) {
   )
 }
 
+// Featured Carousel Component
+function FeaturedCarousel() {
+  const scrollRef = React.useRef<HTMLDivElement>(null)
+  
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = 420
+      scrollRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      })
+    }
+  }
+  
+  return (
+    <section className="section-box" style={{ marginBottom: '28px', position: 'relative' }}>
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        marginBottom: '28px'
+      }}>
+        <h2 style={{
+          fontFamily: 'Cormorant Garamond, serif',
+          color: 'white',
+          fontSize: '1.5rem',
+          fontWeight: 500,
+          display: 'flex',
+          alignItems: 'center',
+          gap: '14px'
+        }}>
+          <Star size={20} style={{ color: '#C9A962' }} strokeWidth={1.5} fill="#C9A962" />
+          Recommended For You
+        </h2>
+        
+        <div style={{ display: 'flex', gap: '8px' }}>
+          <button 
+            onClick={() => scroll('left')}
+            style={{
+              background: 'rgba(255,255,255,0.05)',
+              border: '1px solid rgba(255,255,255,0.1)',
+              color: 'rgba(255,255,255,0.7)',
+              cursor: 'pointer',
+              padding: '10px',
+              borderRadius: '50%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              transition: 'all 0.2s'
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.background = 'rgba(201,169,98,0.15)'
+              e.currentTarget.style.borderColor = 'rgba(201,169,98,0.4)'
+              e.currentTarget.style.color = '#C9A962'
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.background = 'rgba(255,255,255,0.05)'
+              e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'
+              e.currentTarget.style.color = 'rgba(255,255,255,0.7)'
+            }}
+          >
+            <ChevronLeft size={20} strokeWidth={1.5} />
+          </button>
+          <button 
+            onClick={() => scroll('right')}
+            style={{
+              background: 'rgba(255,255,255,0.05)',
+              border: '1px solid rgba(255,255,255,0.1)',
+              color: 'rgba(255,255,255,0.7)',
+              cursor: 'pointer',
+              padding: '10px',
+              borderRadius: '50%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              transition: 'all 0.2s'
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.background = 'rgba(201,169,98,0.15)'
+              e.currentTarget.style.borderColor = 'rgba(201,169,98,0.4)'
+              e.currentTarget.style.color = '#C9A962'
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.background = 'rgba(255,255,255,0.05)'
+              e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'
+              e.currentTarget.style.color = 'rgba(255,255,255,0.7)'
+            }}
+          >
+            <ChevronRight size={20} strokeWidth={1.5} />
+          </button>
+        </div>
+      </div>
+      
+      <div 
+        ref={scrollRef}
+        className="hide-scrollbar" 
+        style={{
+          display: 'flex',
+          gap: '24px',
+          overflowX: 'auto',
+          paddingBottom: '8px',
+          scrollSnapType: 'x mandatory'
+        }}
+      >
+        {featuredContent.map(item => (
+          <div 
+            key={item.id}
+            className="content-card"
+            style={{
+              minWidth: '400px',
+              maxWidth: '400px',
+              cursor: 'pointer',
+              scrollSnapAlign: 'start'
+            }}
+          >
+            {/* Large Thumbnail */}
+            <div className="thumbnail" style={{
+              position: 'relative',
+              aspectRatio: '16/9',
+              background: 'linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%)',
+              marginBottom: '18px',
+              border: '1px solid rgba(255,255,255,0.08)',
+            }}>
+              <Image 
+                src={`/thumbn/${item.id}.jpg`}
+                alt={item.title}
+                fill
+                style={{ objectFit: 'cover' }}
+                onError={(e) => { e.currentTarget.style.display = 'none' }}
+              />
+              
+              {/* Play overlay */}
+              <div style={{
+                position: 'absolute',
+                inset: 0,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                background: 'rgba(0,0,0,0.25)',
+                opacity: 0,
+                transition: 'opacity 0.3s ease',
+              }} className="card-overlay">
+                <div style={{
+                  width: '72px',
+                  height: '72px',
+                  borderRadius: '50%',
+                  background: 'rgba(201,169,98,0.95)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  boxShadow: '0 8px 40px rgba(201,169,98,0.5)'
+                }}>
+                  <Play size={32} style={{ color: '#000', marginLeft: '3px' }} fill="#000" />
+                </div>
+              </div>
+
+              {/* Duration badge */}
+              <div style={{
+                position: 'absolute',
+                bottom: '12px',
+                right: '12px',
+                background: 'rgba(0,0,0,0.85)',
+                padding: '6px 12px',
+                borderRadius: '4px',
+                fontSize: '0.85rem',
+                fontWeight: 600,
+                color: 'white',
+                fontFamily: 'Inter, sans-serif'
+              }}>
+                {item.duration}
+              </div>
+              
+              {/* Featured badge */}
+              <div style={{
+                position: 'absolute',
+                top: '12px',
+                left: '12px',
+                background: 'linear-gradient(135deg, #C9A962, #9B6DFF)',
+                padding: '5px 14px',
+                borderRadius: '4px',
+                fontSize: '0.7rem',
+                fontWeight: 700,
+                color: '#000',
+                textTransform: 'uppercase',
+                letterSpacing: '0.1em',
+                fontFamily: 'Inter, sans-serif'
+              }}>
+                Featured
+              </div>
+            </div>
+
+            {/* Info */}
+            <div>
+              <h3 style={{
+                fontFamily: 'Cormorant Garamond, serif',
+                color: 'white',
+                fontSize: '1.35rem',
+                fontWeight: 600,
+                marginBottom: '8px',
+                lineHeight: 1.3
+              }}>
+                {item.title}
+              </h3>
+              
+              <p style={{
+                color: 'rgba(255,255,255,0.6)',
+                fontSize: '0.9rem',
+                marginBottom: '12px',
+                fontFamily: 'Inter, sans-serif'
+              }}>
+                {item.description}
+              </p>
+              
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between'
+              }}>
+                <p style={{
+                  color: '#C9A962',
+                  fontSize: '0.9rem',
+                  fontWeight: 500,
+                  fontFamily: 'Inter, sans-serif'
+                }}>
+                  {item.creator}
+                </p>
+                
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '16px',
+                  color: 'rgba(255,255,255,0.45)',
+                  fontSize: '0.85rem',
+                  fontFamily: 'Inter, sans-serif'
+                }}>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                    <Eye size={14} />{item.views}
+                  </span>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                    <Heart size={14} />{item.likes}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
+
 export default function MainPage() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
@@ -770,6 +1029,9 @@ export default function MainPage() {
         maxWidth: '1800px',
         margin: '0 auto'
       }}>
+        {/* Featured Carousel - First thing below header */}
+        <FeaturedCarousel />
+        
         {/* Content Rows */}
         <ContentRow title="Watching Now" items={mockContent.slice(0, 6)} icon={Clock} />
         <ContentRow title="Popular" items={[...mockContent].reverse()} icon={TrendingUp} />
