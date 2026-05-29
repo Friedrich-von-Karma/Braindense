@@ -47,14 +47,23 @@ const communities = [
 
 function ContentCard({ item }: { item: typeof mockContent[0] }) {
   return (
-    <div style={{minWidth:'220px',maxWidth:'220px',borderRadius:'6px',overflow:'hidden',background:'#0A0A0A',border:'1px solid rgba(255,255,255,0.12)',cursor:'pointer',transition:'all 0.3s'}} className="card-glow">
-      <div style={{position:'relative',aspectRatio:'16/9',background:'linear-gradient(135deg, #1a0828 0%, #0d0010 100%)',border:'none',borderBottom:'1px solid rgba(255,255,255,0.08)'}}>
-        <div style={{position:'absolute',inset:0,display:'flex',alignItems:'center',justifyContent:'center'}}>
+    <div style={{minWidth:'220px',maxWidth:'220px',borderRadius:'6px',overflow:'hidden',background:'#0A0A0A',cursor:'pointer',transition:'all 0.3s'}} className="card-glow">
+      <div style={{position:'relative',aspectRatio:'16/9',background:'linear-gradient(135deg, #1a0828 0%, #0d0010 100%)',border:'2px solid rgba(255,255,255,0.25)',borderRadius:'6px 6px 0 0',overflow:'hidden'}}>
+        <Image 
+          src={`/thumbn/${item.id}.jpg`}
+          alt={item.title}
+          fill
+          style={{objectFit:'cover'}}
+          onError={(e) => {
+            e.currentTarget.style.display = 'none'
+          }}
+        />
+        <div style={{position:'absolute',inset:0,display:'flex',alignItems:'center',justifyContent:'center',background:'rgba(0,0,0,0.3)'}}>
           <div style={{width:'48px',height:'48px',borderRadius:'50%',background:'rgba(0,0,0,0.6)',border:'2px solid rgba(212,182,90,0.5)',display:'flex',alignItems:'center',justifyContent:'center'}}>
             <Play size={20} style={{color:'#D4B65A',marginLeft:'2px'}} fill="rgba(212,182,90,0.3)" />
           </div>
         </div>
-        <div style={{position:'absolute',bottom:'8px',right:'8px',background:'rgba(0,0,0,0.9)',padding:'3px 8px',borderRadius:'2px',fontSize:'0.7rem',color:'white',fontWeight:600,border:'1px solid rgba(255,255,255,0.1)'}}>{item.duration}</div>
+        <div style={{position:'absolute',bottom:'8px',right:'8px',background:'rgba(0,0,0,0.9)',padding:'3px 8px',borderRadius:'2px',fontSize:'0.7rem',color:'white',fontWeight:600}}>{item.duration}</div>
         <div style={{position:'absolute',top:'8px',left:'8px',background:'rgba(143,63,212,0.9)',padding:'2px 8px',borderRadius:'2px',fontSize:'0.6rem',color:'white',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.05em'}}>HD</div>
       </div>
       <div style={{padding:'14px'}}>
@@ -91,9 +100,9 @@ function ContentRow({ title, items, icon: Icon }: { title: string, items: typeof
 
 function CommunityPost({ post }: { post: typeof communityPosts[0] }) {
   return (
-    <div style={{background:'#0A0A0A',border:'1px solid rgba(255,255,255,0.12)',borderRadius:'8px',padding:'16px',marginBottom:'12px'}}>
+    <div style={{background:'#0A0A0A',borderRadius:'8px',padding:'16px',marginBottom:'12px'}}>
       <div style={{display:'flex',alignItems:'center',gap:'12px',marginBottom:'12px'}}>
-        <div style={{width:'40px',height:'40px',borderRadius:'50%',background:'linear-gradient(135deg, #8F3FD4, #D4B65A)',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:700,color:'white',fontSize:'1rem',border:'2px solid rgba(255,255,255,0.1)'}}>{post.avatar}</div>
+        <div style={{width:'40px',height:'40px',borderRadius:'50%',background:'linear-gradient(135deg, #8F3FD4, #D4B65A)',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:700,color:'white',fontSize:'1rem'}}>{post.avatar}</div>
         <div>
           <p style={{color:'white',fontWeight:700,fontSize:'0.9rem'}}>{post.user}</p>
           <p style={{color:'rgba(255,255,255,0.4)',fontSize:'0.75rem'}}>{post.time}</p>
@@ -110,9 +119,9 @@ function CommunityPost({ post }: { post: typeof communityPosts[0] }) {
 
 function GroupCard({ group }: { group: typeof groups[0] }) {
   return (
-    <div style={{background:'#0A0A0A',border:'1px solid rgba(255,255,255,0.12)',borderRadius:'6px',padding:'14px',minWidth:'180px',cursor:'pointer',transition:'all 0.2s'}}
-      onMouseOver={(e) => e.currentTarget.style.borderColor = 'rgba(212,182,90,0.4)'}
-      onMouseOut={(e) => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'}
+    <div style={{background:'#0A0A0A',borderRadius:'6px',padding:'14px',minWidth:'180px',cursor:'pointer',transition:'all 0.2s'}}
+      onMouseOver={(e) => e.currentTarget.style.background = 'rgba(212,182,90,0.08)'}
+      onMouseOut={(e) => e.currentTarget.style.background = '#0A0A0A'}
     >
       <h4 style={{color:'white',fontWeight:700,fontSize:'0.9rem',marginBottom:'8px'}}>{group.name}</h4>
       <div style={{display:'flex',alignItems:'center',gap:'12px',color:'rgba(255,255,255,0.5)',fontSize:'0.75rem'}}>
@@ -125,9 +134,9 @@ function GroupCard({ group }: { group: typeof groups[0] }) {
 
 function CommunityCard({ community }: { community: typeof communities[0] }) {
   return (
-    <div style={{background:'linear-gradient(135deg, rgba(143,63,212,0.15), rgba(212,182,90,0.05))',border:'1px solid rgba(255,255,255,0.12)',borderRadius:'8px',padding:'18px',minWidth:'200px',cursor:'pointer',transition:'all 0.2s'}}
-      onMouseOver={(e) => e.currentTarget.style.borderColor = 'rgba(143,63,212,0.5)'}
-      onMouseOut={(e) => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'}
+    <div style={{background:'linear-gradient(135deg, rgba(143,63,212,0.15), rgba(212,182,90,0.05))',borderRadius:'8px',padding:'18px',minWidth:'200px',cursor:'pointer',transition:'all 0.2s'}}
+      onMouseOver={(e) => e.currentTarget.style.background = 'linear-gradient(135deg, rgba(143,63,212,0.25), rgba(212,182,90,0.1))'}
+      onMouseOut={(e) => e.currentTarget.style.background = 'linear-gradient(135deg, rgba(143,63,212,0.15), rgba(212,182,90,0.05))'}
     >
       <h4 style={{color:'white',fontWeight:700,fontSize:'0.95rem',marginBottom:'6px'}}>{community.name}</h4>
       <p style={{color:'rgba(255,255,255,0.5)',fontSize:'0.8rem',marginBottom:'10px'}}>{community.description}</p>
