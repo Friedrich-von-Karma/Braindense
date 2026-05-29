@@ -25,20 +25,20 @@ const getThumbnail = (id: number) => {
 }
 
 const mockContent = [
-  { id: 1, title: 'Sunlit Morning', creator: 'Luna Eclipse', views: '24K', duration: '18:42', likes: '2.1K', description: 'A tender moment captured in golden morning light' },
-  { id: 2, title: 'The Letter', creator: 'James & Sofia', views: '18K', duration: '22:15', likes: '1.8K', description: 'Two lovers reunite after months apart' },
-  { id: 3, title: 'Room 212', creator: 'Scarlet Rose', views: '32K', duration: '15:30', likes: '3.2K', description: 'A chance encounter at a boutique hotel' },
-  { id: 4, title: 'Slow Dance', creator: 'Velvet Dreams', views: '28K', duration: '20:00', likes: '2.5K', description: 'Beautifully filmed with natural candlelight' },
-  { id: 5, title: 'Summer Rain', creator: 'Ava & Lucas', views: '15K', duration: '25:10', likes: '1.2K', description: 'Passion ignites during a sudden downpour' },
-  { id: 6, title: 'The Photographer', creator: 'Dark Angel', views: '42K', duration: '19:45', likes: '4.1K', description: 'A model and her photographer blur the lines' },
-  { id: 7, title: 'Midnight Call', creator: 'Neon Vixen', views: '19K', duration: '21:30', likes: '1.9K', description: 'A late night conversation turns intimate' },
-  { id: 8, title: 'Venice Nights', creator: 'Amber Sky', views: '35K', duration: '17:20', likes: '3.5K', description: 'Romance unfolds in a historic palazzo' },
+  { id: 1, title: 'Sunlit Morning', creator: 'sarah_and_mike', views: '24K', duration: '18:42', likes: '2.1K', description: 'A tender moment captured in golden morning light' },
+  { id: 2, title: 'The Letter', creator: 'BlueRoom Studios', views: '18K', duration: '22:15', likes: '1.8K', description: 'Two lovers reunite after months apart' },
+  { id: 3, title: 'Room 212', creator: 'emmarose22', views: '32K', duration: '15:30', likes: '3.2K', description: 'A chance encounter at a boutique hotel' },
+  { id: 4, title: 'Slow Dance', creator: 'CoupleNextDoor', views: '28K', duration: '20:00', likes: '2.5K', description: 'Beautifully filmed with natural candlelight' },
+  { id: 5, title: 'Summer Rain', creator: 'Red Velvet Productions', views: '15K', duration: '25:10', likes: '1.2K', description: 'Passion ignites during a sudden downpour' },
+  { id: 6, title: 'The Photographer', creator: 'alex_93', views: '42K', duration: '19:45', likes: '4.1K', description: 'A model and her photographer blur the lines' },
+  { id: 7, title: 'Midnight Call', creator: 'Intimate Films Co', views: '19K', duration: '21:30', likes: '1.9K', description: 'A late night conversation turns intimate' },
+  { id: 8, title: 'Venice Nights', creator: 'realcouple_uk', views: '35K', duration: '17:20', likes: '3.5K', description: 'Romance unfolds in a historic palazzo' },
 ]
 
 const communityPosts = [
-  { id: 1, user: 'Luna Eclipse', avatar: 'L', content: 'Just wrapped filming on my new piece. The lighting came out absolutely stunning - cannot wait to share it with you all next week.', likes: 234, comments: 45, time: '2h ago', verified: true },
-  { id: 2, user: 'Velvet Dreams', avatar: 'V', content: 'Behind the scenes from our Venice shoot. The palazzo was breathtaking at sunset. Full release coming Friday.', likes: 567, comments: 89, time: '4h ago', verified: true },
-  { id: 3, user: 'Ava & Lucas', avatar: 'A', content: 'Thank you everyone for 50K views on Summer Rain! Your support means everything to us. More coming soon.', likes: 1200, comments: 156, time: '6h ago', verified: false },
+  { id: 1, user: 'emmarose22', avatar: 'E', content: 'Just wrapped filming on my new piece. The lighting came out absolutely stunning - cannot wait to share it with you all next week.', likes: 234, comments: 45, time: '2h ago', verified: true },
+  { id: 2, user: 'BlueRoom Studios', avatar: 'B', content: 'Behind the scenes from our Venice shoot. The palazzo was breathtaking at sunset. Full release coming Friday.', likes: 567, comments: 89, time: '4h ago', verified: true },
+  { id: 3, user: 'sarah_and_mike', avatar: 'S', content: 'Thank you everyone for 50K views on Summer Rain! Your support means everything to us. More coming soon.', likes: 1200, comments: 156, time: '6h ago', verified: false },
 ]
 
 const groups = [
@@ -55,11 +55,11 @@ const communities = [
 ]
 
 const featuredContent = [
-  { id: 101, title: 'The Last Train', creator: 'Scarlet Rose', views: '156K', duration: '32:15', likes: '24K', description: 'Two strangers share an unforgettable journey through the French countryside' },
-  { id: 102, title: 'Canvas', creator: 'Velvet Dreams', views: '98K', duration: '45:00', likes: '18K', description: 'An artist finds inspiration in her newest muse. Stunningly shot in natural light.' },
-  { id: 103, title: 'After the Party', creator: 'James & Sofia', views: '234K', duration: '28:30', likes: '32K', description: 'The night continues after everyone else has gone home' },
-  { id: 104, title: 'Silk', creator: 'Neon Vixen', views: '87K', duration: '38:45', likes: '15K', description: 'Elegance and desire intertwine in this visually stunning piece' },
-  { id: 105, title: 'The Weekend', creator: 'Dark Angel', views: '112K', duration: '26:20', likes: '19K', description: 'A couple escapes to the coast. Intimate and beautifully composed.' },
+  { id: 101, title: 'The Last Train', creator: 'Passion Arts Studio', views: '156K', duration: '32:15', likes: '24K', description: 'Two strangers share an unforgettable journey through the French countryside' },
+  { id: 102, title: 'Canvas', creator: 'julia_sweet', views: '98K', duration: '45:00', likes: '18K', description: 'An artist finds inspiration in her newest muse. Stunningly shot in natural light.' },
+  { id: 103, title: 'After the Party', creator: 'tom_and_lisa', views: '234K', duration: '28:30', likes: '32K', description: 'The night continues after everyone else has gone home' },
+  { id: 104, title: 'Silk', creator: 'Midnight Media', views: '87K', duration: '38:45', likes: '15K', description: 'Elegance and desire intertwine in this visually stunning piece' },
+  { id: 105, title: 'The Weekend', creator: 'naturallove_couple', views: '112K', duration: '26:20', likes: '19K', description: 'A couple escapes to the coast. Intimate and beautifully composed.' },
 ]
 
 // Content Card Component
