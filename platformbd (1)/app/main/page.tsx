@@ -25,41 +25,41 @@ const getThumbnail = (id: number) => {
 }
 
 const mockContent = [
-  { id: 1, title: 'Midnight Desires', creator: 'Luna Eclipse', views: '24K', duration: '18:42', likes: '2.1K', premium: true },
-  { id: 2, title: 'Ocean Dreams', creator: 'Aqua Muse', views: '18K', duration: '22:15', likes: '1.8K', premium: false },
-  { id: 3, title: 'Electric Touch', creator: 'Neon Vixen', views: '32K', duration: '15:30', likes: '3.2K', premium: true },
-  { id: 4, title: 'Velvet Night', creator: 'Scarlet Rose', views: '28K', duration: '20:00', likes: '2.5K', premium: false },
-  { id: 5, title: 'Golden Hour', creator: 'Amber Sky', views: '15K', duration: '25:10', likes: '1.2K', premium: true },
-  { id: 6, title: 'Shadow Play', creator: 'Dark Angel', views: '42K', duration: '19:45', likes: '4.1K', premium: false },
-  { id: 7, title: 'Silk & Satin', creator: 'Velvet Dreams', views: '19K', duration: '21:30', likes: '1.9K', premium: true },
-  { id: 8, title: 'Neon Nights', creator: 'Cyber Venus', views: '35K', duration: '17:20', likes: '3.5K', premium: false },
+  { id: 1, title: 'Crimson Whispers', creator: 'Velvet Studios', views: '24K', duration: '18:42', likes: '2.1K', premium: true },
+  { id: 2, title: 'Neural Embrace v2.1', creator: 'SynthDev_Marcus', views: '18K', duration: '22:15', likes: '1.8K', premium: false },
+  { id: 3, title: 'After Hours', creator: 'Noir Collective', views: '32K', duration: '15:30', likes: '3.2K', premium: true },
+  { id: 4, title: 'AI Companion: Luna', creator: 'PixelDream Labs', views: '28K', duration: '20:00', likes: '2.5K', premium: false },
+  { id: 5, title: 'Golden Shadows', creator: 'Amateur Hour Films', views: '15K', duration: '25:10', likes: '1.2K', premium: true },
+  { id: 6, title: 'Simulation Alpha', creator: 'dev_sarah_ai', views: '42K', duration: '19:45', likes: '4.1K', premium: false },
+  { id: 7, title: 'Midnight in Paris', creator: 'EroticaVerse', views: '19K', duration: '21:30', likes: '1.9K', premium: true },
+  { id: 8, title: 'Synthetic Dreams', creator: 'NeonByte Interactive', views: '35K', duration: '17:20', likes: '3.5K', premium: false },
 ]
 
 const communityPosts = [
-  { id: 1, user: 'Luna Eclipse', avatar: 'L', content: 'Just uploaded a new experience! Check it out and let me know what you think.', likes: 234, comments: 45, time: '2h ago', verified: true },
-  { id: 2, user: 'Neon Vixen', avatar: 'N', content: 'Working on something special for the weekend. Stay tuned for the preview!', likes: 567, comments: 89, time: '4h ago', verified: true },
-  { id: 3, user: 'Dark Angel', avatar: 'D', content: 'Thanks everyone for 10K followers! New content dropping tomorrow.', likes: 1200, comments: 156, time: '6h ago', verified: false },
+  { id: 1, user: 'PixelDream Labs', avatar: 'P', content: 'Just released AI Companion v3.0 - now with haptic sync and mood detection. Feedback welcome!', likes: 234, comments: 45, time: '2h ago', verified: true },
+  { id: 2, user: 'dev_sarah_ai', avatar: 'S', content: 'Working on a new neural simulation. This one learns your preferences in real-time. Beta testers needed!', likes: 567, comments: 89, time: '4h ago', verified: true },
+  { id: 3, user: 'Noir Collective', avatar: 'N', content: 'Behind the scenes from our latest amateur shoot. Raw, authentic, unscripted moments.', likes: 1200, comments: 156, time: '6h ago', verified: false },
 ]
 
 const groups = [
-  { id: 1, name: 'VR Enthusiasts', members: '12.4K', activity: 'Very Active' },
+  { id: 1, name: 'AI Developers Hub', members: '12.4K', activity: 'Very Active' },
   { id: 2, name: 'Device Sync Tips', members: '8.2K', activity: 'Active' },
-  { id: 3, name: 'Creator Collab', members: '5.6K', activity: 'Active' },
-  { id: 4, name: 'Premium Lounge', members: '3.1K', activity: 'Exclusive' },
+  { id: 3, name: 'Indie Creators', members: '5.6K', activity: 'Active' },
+  { id: 4, name: 'Studio Network', members: '3.1K', activity: 'Exclusive' },
 ]
 
 const communities = [
-  { id: 1, name: 'Midnight Creators', members: '45K', description: 'Top creators sharing tips', online: 234 },
-  { id: 2, name: 'Tech & Toys', members: '28K', description: 'Device discussions & reviews', online: 156 },
-  { id: 3, name: 'New Explorers', members: '67K', description: 'Beginners welcome here', online: 892 },
+  { id: 1, name: 'Amateur Filmmakers', members: '45K', description: 'Real couples, authentic content', online: 234 },
+  { id: 2, name: 'AI Simulation Dev', members: '28K', description: 'Build & share neural experiences', online: 156 },
+  { id: 3, name: 'Interactive Creators', members: '67K', description: 'Games, apps & immersive tech', online: 892 },
 ]
 
 const featuredContent = [
-  { id: 101, title: 'Midnight Symphony', creator: 'Luna Eclipse', views: '156K', duration: '32:15', likes: '24K', description: 'An immersive journey through the senses' },
-  { id: 102, title: 'Velvet Dreams Collection', creator: 'Scarlet Rose', views: '98K', duration: '45:00', likes: '18K', description: 'Premium exclusive series' },
-  { id: 103, title: 'Electric Paradise', creator: 'Neon Vixen', views: '234K', duration: '28:30', likes: '32K', description: 'Award-winning experience' },
-  { id: 104, title: 'Golden Hour Special', creator: 'Amber Sky', views: '87K', duration: '38:45', likes: '15K', description: 'Limited time feature' },
-  { id: 105, title: 'Silk Whispers', creator: 'Velvet Dreams', views: '112K', duration: '26:20', likes: '19K', description: 'Most anticipated release' },
+  { id: 101, title: 'Echo Chamber', creator: 'Obsidian Productions', views: '156K', duration: '32:15', likes: '24K', description: 'Award-winning studio production with full device integration' },
+  { id: 102, title: 'Neural Link Experience', creator: 'solo_dev_mike', views: '98K', duration: '45:00', likes: '18K', description: 'Indie AI simulation that adapts to your responses in real-time' },
+  { id: 103, title: 'Apartment 4B', creator: 'Real Couples Co.', views: '234K', duration: '28:30', likes: '32K', description: 'Authentic amateur footage from verified couples' },
+  { id: 104, title: 'Sentient v4.2', creator: 'NeonByte Interactive', views: '87K', duration: '38:45', likes: '15K', description: 'Next-gen AI companion with emotional intelligence engine' },
+  { id: 105, title: 'The Red Room', creator: 'Velvet Studios', views: '112K', duration: '26:20', likes: '19K', description: 'Professional cinematography meets intimate storytelling' },
 ]
 
 // Content Card Component
