@@ -15,6 +15,15 @@ const categories = [
   { name: 'Groups', icon: MessageCircle },
 ]
 
+// Available thumbnails - cycle through these for all content
+const availableThumbnails = [1, 2, 3, 4, 5, 101, 102, 103]
+
+// Helper to get thumbnail for any item ID
+const getThumbnail = (id: number) => {
+  const index = (id - 1) % availableThumbnails.length
+  return `/thumbn/${availableThumbnails[index]}.jpg`
+}
+
 const mockContent = [
   { id: 1, title: 'Midnight Desires', creator: 'Luna Eclipse', views: '24K', duration: '18:42', likes: '2.1K', premium: true },
   { id: 2, title: 'Ocean Dreams', creator: 'Aqua Muse', views: '18K', duration: '22:15', likes: '1.8K', premium: false },
@@ -70,11 +79,10 @@ function ContentCard({ item }: { item: typeof mockContent[0] }) {
         border: '1px solid rgba(255,255,255,0.08)',
       }}>
         <Image 
-          src={`/thumbn/${item.id}.jpg`}
+          src={getThumbnail(item.id)}
           alt={item.title}
           fill
           style={{ objectFit: 'cover' }}
-          onError={(e) => { e.currentTarget.style.display = 'none' }}
         />
         
         {/* Play overlay */}
@@ -561,11 +569,10 @@ function FeaturedCarousel() {
               border: '1px solid rgba(255,255,255,0.08)',
             }}>
               <Image 
-                src={`/thumbn/${item.id}.jpg`}
+                src={getThumbnail(item.id)}
                 alt={item.title}
                 fill
                 style={{ objectFit: 'cover' }}
-                onError={(e) => { e.currentTarget.style.display = 'none' }}
               />
               
               {/* Play overlay */}
