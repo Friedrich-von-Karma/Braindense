@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Image from 'next/image'
-import { Search, User, Bell, Mail, Library, Menu, X, Play, Gamepad2, Film, AppWindow, Music, BookOpen, Sparkles, Heart, Eye, Users, MessageCircle, Clock, TrendingUp, Star, Zap, ChevronRight } from 'lucide-react'
+import { Search, User, Bell, Mail, Library, Menu, X, Play, Gamepad2, Film, AppWindow, Music, BookOpen, Sparkles, Heart, Eye, Users, MessageCircle, Clock, TrendingUp, Star, ChevronRight, Upload, Settings, History, Bookmark, Flame } from 'lucide-react'
 
 const categories = [
   { name: 'Videos', icon: Play },
@@ -109,26 +109,6 @@ function ContentCard({ item }: { item: typeof mockContent[0] }) {
         }}>
           {item.duration}
         </div>
-
-        {/* Premium badge */}
-        {item.premium && (
-          <div style={{
-            position: 'absolute',
-            top: '10px',
-            left: '10px',
-            background: 'linear-gradient(135deg, #C9A962, #A88A4A)',
-            padding: '3px 10px',
-            borderRadius: '2px',
-            fontSize: '0.65rem',
-            fontWeight: 700,
-            color: '#000',
-            textTransform: 'uppercase',
-            letterSpacing: '0.08em',
-            fontFamily: 'Inter, sans-serif'
-          }}>
-            Premium
-          </div>
-        )}
       </div>
 
       {/* Info */}
@@ -716,13 +696,18 @@ export default function MainPage() {
           <div style={{
             display: 'flex',
             alignItems: 'center',
-            gap: '8px',
+            gap: '6px',
             marginLeft: 'auto'
           }}>
             {[
+              { icon: Flame, label: 'Trending' },
+              { icon: History, label: 'History' },
+              { icon: Bookmark, label: 'Saved' },
+              { icon: Upload, label: 'Upload' },
               { icon: Library, label: 'My Library' },
               { icon: Bell, label: 'Notifications' },
               { icon: Mail, label: 'Inbox' },
+              { icon: Settings, label: 'Settings' },
             ].map(item => {
               const Icon = item.icon
               return (
@@ -734,7 +719,7 @@ export default function MainPage() {
                     border: '1px solid rgba(255,255,255,0.08)',
                     color: 'rgba(255,255,255,0.6)',
                     cursor: 'pointer',
-                    padding: '12px',
+                    padding: '10px',
                     borderRadius: '8px',
                     display: 'flex',
                     alignItems: 'center',
