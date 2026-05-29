@@ -131,7 +131,7 @@ function CommunityCard({ community }: { community: typeof communities[0] }) {
     >
       <h4 style={{color:'white',fontWeight:700,fontSize:'0.95rem',marginBottom:'6px'}}>{community.name}</h4>
       <p style={{color:'rgba(255,255,255,0.5)',fontSize:'0.8rem',marginBottom:'10px'}}>{community.description}</p>
-      <div style={{display:'flex',alignItems:'center',gap:'6px',color:'#8F3FD4',fontSize:'0.8rem',fontWeight:600'}}>
+      <div style={{display:'flex',alignItems:'center',gap:'6px',color:'#8F3FD4',fontSize:'0.8rem',fontWeight:600}}>
         <Users size={14}/>{community.members} members
       </div>
     </div>
