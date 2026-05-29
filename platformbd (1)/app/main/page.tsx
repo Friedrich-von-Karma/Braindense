@@ -25,41 +25,41 @@ const getThumbnail = (id: number) => {
 }
 
 const mockContent = [
-  { id: 1, title: 'Sunlit Morning', creator: 'sarah_and_mike', views: '24K', duration: '18:42', likes: '2.1K', description: 'A tender moment captured in golden morning light' },
-  { id: 2, title: 'The Letter', creator: 'BlueRoom Studios', views: '18K', duration: '22:15', likes: '1.8K', description: 'Two lovers reunite after months apart' },
-  { id: 3, title: 'Room 212', creator: 'emmarose22', views: '32K', duration: '15:30', likes: '3.2K', description: 'A chance encounter at a boutique hotel' },
-  { id: 4, title: 'Slow Dance', creator: 'CoupleNextDoor', views: '28K', duration: '20:00', likes: '2.5K', description: 'Beautifully filmed with natural candlelight' },
-  { id: 5, title: 'Summer Rain', creator: 'Red Velvet Productions', views: '15K', duration: '25:10', likes: '1.2K', description: 'Passion ignites during a sudden downpour' },
-  { id: 6, title: 'The Photographer', creator: 'alex_93', views: '42K', duration: '19:45', likes: '4.1K', description: 'A model and her photographer blur the lines' },
-  { id: 7, title: 'Midnight Call', creator: 'Intimate Films Co', views: '19K', duration: '21:30', likes: '1.9K', description: 'A late night conversation turns intimate' },
-  { id: 8, title: 'Venice Nights', creator: 'realcouple_uk', views: '35K', duration: '17:20', likes: '3.5K', description: 'Romance unfolds in a historic palazzo' },
+  { id: 1, title: 'My Stepsister Caught Me', creator: 'HentaiHeaven', views: '24K', duration: '18:42', likes: '2.1K', description: 'Full HD animated with English subtitles' },
+  { id: 2, title: 'Office Lady After Hours', creator: 'TokyoAnimation', views: '18K', duration: '22:15', likes: '1.8K', description: 'Episode 3 of the popular series' },
+  { id: 3, title: 'The Neighbor Next Door', creator: 'realamateur_couple', views: '32K', duration: '15:30', likes: '3.2K', description: 'POV homemade with real audio' },
+  { id: 4, title: 'Succubus Academy Ep.4', creator: 'DreamRender3D', views: '28K', duration: '20:00', likes: '2.5K', description: '4K rendered animation with voice acting' },
+  { id: 5, title: 'Landlady Needs Rent', creator: 'Kimochi Studios', views: '15K', duration: '25:10', likes: '1.2K', description: 'Uncensored version available' },
+  { id: 6, title: 'AI Girlfriend Simulator', creator: 'VirtualPassion', views: '42K', duration: '19:45', likes: '4.1K', description: 'Interactive AI-generated experience' },
+  { id: 7, title: 'College Roommate Surprise', creator: 'young_and_wild', views: '19K', duration: '21:30', likes: '1.9K', description: 'Amateur dorm room footage' },
+  { id: 8, title: 'Elf Princess Captured', creator: 'FantasyForge', views: '35K', duration: '17:20', likes: '3.5K', description: 'Fantasy RPG style animation' },
 ]
 
 const communityPosts = [
-  { id: 1, user: 'emmarose22', avatar: 'E', content: 'Just wrapped filming on my new piece. The lighting came out absolutely stunning - cannot wait to share it with you all next week.', likes: 234, comments: 45, time: '2h ago', verified: true },
-  { id: 2, user: 'BlueRoom Studios', avatar: 'B', content: 'Behind the scenes from our Venice shoot. The palazzo was breathtaking at sunset. Full release coming Friday.', likes: 567, comments: 89, time: '4h ago', verified: true },
-  { id: 3, user: 'sarah_and_mike', avatar: 'S', content: 'Thank you everyone for 50K views on Summer Rain! Your support means everything to us. More coming soon.', likes: 1200, comments: 156, time: '6h ago', verified: false },
+  { id: 1, user: 'HentaiHeaven', avatar: 'H', content: 'New uncensored episode dropping this weekend! Full voice acting and 4K render. Stay tuned.', likes: 234, comments: 45, time: '2h ago', verified: true },
+  { id: 2, user: 'DreamRender3D', avatar: 'D', content: 'Succubus Academy Episode 5 is in production. Preview renders coming next week!', likes: 567, comments: 89, time: '4h ago', verified: true },
+  { id: 3, user: 'realamateur_couple', avatar: 'R', content: 'Thanks everyone for 10K views! We read all your comments. More homemade content soon.', likes: 1200, comments: 156, time: '6h ago', verified: false },
 ]
 
 const groups = [
-  { id: 1, name: 'Filmmaking Tips', members: '12.4K', activity: 'Very Active' },
-  { id: 2, name: 'Lighting & Mood', members: '8.2K', activity: 'Active' },
-  { id: 3, name: 'Couples Corner', members: '5.6K', activity: 'Active' },
-  { id: 4, name: 'Art Directors', members: '3.1K', activity: 'Exclusive' },
+  { id: 1, name: 'Hentai Fans', members: '12.4K', activity: 'Very Active' },
+  { id: 2, name: '3D Animation', members: '8.2K', activity: 'Active' },
+  { id: 3, name: 'Amateur Creators', members: '5.6K', activity: 'Active' },
+  { id: 4, name: 'AI Generated', members: '3.1K', activity: 'Exclusive' },
 ]
 
 const communities = [
-  { id: 1, name: 'Independent Creators', members: '45K', description: 'Share your work and get feedback', online: 234 },
-  { id: 2, name: 'Cinematography', members: '28K', description: 'Discuss lighting, angles, and mood', online: 156 },
-  { id: 3, name: 'New Releases', members: '67K', description: 'First looks and premieres', online: 892 },
+  { id: 1, name: 'Anime & Hentai', members: '45K', description: 'Japanese style animations', online: 234 },
+  { id: 2, name: '3D Renders', members: '28K', description: 'Blender, DAZ, and more', online: 156 },
+  { id: 3, name: 'Homemade Videos', members: '67K', description: 'Real amateur content', online: 892 },
 ]
 
 const featuredContent = [
-  { id: 101, title: 'The Last Train', creator: 'Passion Arts Studio', views: '156K', duration: '32:15', likes: '24K', description: 'Two strangers share an unforgettable journey through the French countryside' },
-  { id: 102, title: 'Canvas', creator: 'julia_sweet', views: '98K', duration: '45:00', likes: '18K', description: 'An artist finds inspiration in her newest muse. Stunningly shot in natural light.' },
-  { id: 103, title: 'After the Party', creator: 'tom_and_lisa', views: '234K', duration: '28:30', likes: '32K', description: 'The night continues after everyone else has gone home' },
-  { id: 104, title: 'Silk', creator: 'Midnight Media', views: '87K', duration: '38:45', likes: '15K', description: 'Elegance and desire intertwine in this visually stunning piece' },
-  { id: 105, title: 'The Weekend', creator: 'naturallove_couple', views: '112K', duration: '26:20', likes: '19K', description: 'A couple escapes to the coast. Intimate and beautifully composed.' },
+  { id: 101, title: 'Demon Queen Awakens', creator: 'FantasyForge', views: '156K', duration: '32:15', likes: '24K', description: 'Epic fantasy animation with stunning visuals and full voice cast' },
+  { id: 102, title: 'Teacher After Class', creator: 'Kimochi Studios', views: '98K', duration: '45:00', likes: '18K', description: 'Uncensored full episode with multiple endings' },
+  { id: 103, title: 'Virtual Waifu Experience', creator: 'VirtualPassion', views: '234K', duration: '28:30', likes: '32K', description: 'AI-generated interactive simulation' },
+  { id: 104, title: 'Poolside With Stepsister', creator: 'TokyoAnimation', views: '87K', duration: '38:45', likes: '15K', description: 'Summer special HD animation' },
+  { id: 105, title: 'First Time Together', creator: 'young_and_wild', views: '112K', duration: '26:20', likes: '19K', description: 'Real couple amateur debut video' },
 ]
 
 // Content Card Component
