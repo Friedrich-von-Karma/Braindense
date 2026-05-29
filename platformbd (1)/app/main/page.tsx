@@ -15,42 +15,51 @@ const categories = [
   { name: 'Groups', icon: MessageCircle },
 ]
 
+// Available thumbnails - cycle through these for all content
+const availableThumbnails = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 101, 102, 103]
+
+// Helper to get thumbnail for any item ID
+const getThumbnail = (id: number) => {
+  const index = (id - 1) % availableThumbnails.length
+  return `/thumbn/${availableThumbnails[index]}.jpg`
+}
+
 const mockContent = [
-  { id: 1, title: 'Midnight Desires', creator: 'Luna Eclipse', views: '24K', duration: '18:42', likes: '2.1K', premium: true },
-  { id: 2, title: 'Ocean Dreams', creator: 'Aqua Muse', views: '18K', duration: '22:15', likes: '1.8K', premium: false },
-  { id: 3, title: 'Electric Touch', creator: 'Neon Vixen', views: '32K', duration: '15:30', likes: '3.2K', premium: true },
-  { id: 4, title: 'Velvet Night', creator: 'Scarlet Rose', views: '28K', duration: '20:00', likes: '2.5K', premium: false },
-  { id: 5, title: 'Golden Hour', creator: 'Amber Sky', views: '15K', duration: '25:10', likes: '1.2K', premium: true },
-  { id: 6, title: 'Shadow Play', creator: 'Dark Angel', views: '42K', duration: '19:45', likes: '4.1K', premium: false },
-  { id: 7, title: 'Silk & Satin', creator: 'Velvet Dreams', views: '19K', duration: '21:30', likes: '1.9K', premium: true },
-  { id: 8, title: 'Neon Nights', creator: 'Cyber Venus', views: '35K', duration: '17:20', likes: '3.5K', premium: false },
+  { id: 1, title: 'Sunlit Morning', creator: 'sarah_and_mike', views: '24K', duration: '18:42', likes: '2.1K', description: 'A tender moment captured in golden morning light' },
+  { id: 2, title: 'The Letter', creator: 'BlueRoom Studios', views: '18K', duration: '22:15', likes: '1.8K', description: 'Two lovers reunite after months apart' },
+  { id: 3, title: 'Room 212', creator: 'emmarose22', views: '32K', duration: '15:30', likes: '3.2K', description: 'A chance encounter at a boutique hotel' },
+  { id: 4, title: 'Slow Dance', creator: 'CoupleNextDoor', views: '28K', duration: '20:00', likes: '2.5K', description: 'Beautifully filmed with natural candlelight' },
+  { id: 5, title: 'Summer Rain', creator: 'Red Velvet Productions', views: '15K', duration: '25:10', likes: '1.2K', description: 'Passion ignites during a sudden downpour' },
+  { id: 6, title: 'The Photographer', creator: 'alex_93', views: '42K', duration: '19:45', likes: '4.1K', description: 'A model and her photographer blur the lines' },
+  { id: 7, title: 'Midnight Call', creator: 'Intimate Films Co', views: '19K', duration: '21:30', likes: '1.9K', description: 'A late night conversation turns intimate' },
+  { id: 8, title: 'Venice Nights', creator: 'realcouple_uk', views: '35K', duration: '17:20', likes: '3.5K', description: 'Romance unfolds in a historic palazzo' },
 ]
 
 const communityPosts = [
-  { id: 1, user: 'Luna Eclipse', avatar: 'L', content: 'Just uploaded a new experience! Check it out and let me know what you think.', likes: 234, comments: 45, time: '2h ago', verified: true },
-  { id: 2, user: 'Neon Vixen', avatar: 'N', content: 'Working on something special for the weekend. Stay tuned for the preview!', likes: 567, comments: 89, time: '4h ago', verified: true },
-  { id: 3, user: 'Dark Angel', avatar: 'D', content: 'Thanks everyone for 10K followers! New content dropping tomorrow.', likes: 1200, comments: 156, time: '6h ago', verified: false },
+  { id: 1, user: 'emmarose22', avatar: 'E', content: 'Just wrapped filming on my new piece. The lighting came out absolutely stunning - cannot wait to share it with you all next week.', likes: 234, comments: 45, time: '2h ago', verified: true },
+  { id: 2, user: 'BlueRoom Studios', avatar: 'B', content: 'Behind the scenes from our Venice shoot. The palazzo was breathtaking at sunset. Full release coming Friday.', likes: 567, comments: 89, time: '4h ago', verified: true },
+  { id: 3, user: 'sarah_and_mike', avatar: 'S', content: 'Thank you everyone for 50K views on Summer Rain! Your support means everything to us. More coming soon.', likes: 1200, comments: 156, time: '6h ago', verified: false },
 ]
 
 const groups = [
-  { id: 1, name: 'VR Enthusiasts', members: '12.4K', activity: 'Very Active' },
-  { id: 2, name: 'Device Sync Tips', members: '8.2K', activity: 'Active' },
-  { id: 3, name: 'Creator Collab', members: '5.6K', activity: 'Active' },
-  { id: 4, name: 'Premium Lounge', members: '3.1K', activity: 'Exclusive' },
+  { id: 1, name: 'Filmmaking Tips', members: '12.4K', activity: 'Very Active' },
+  { id: 2, name: 'Lighting & Mood', members: '8.2K', activity: 'Active' },
+  { id: 3, name: 'Couples Corner', members: '5.6K', activity: 'Active' },
+  { id: 4, name: 'Art Directors', members: '3.1K', activity: 'Exclusive' },
 ]
 
 const communities = [
-  { id: 1, name: 'Midnight Creators', members: '45K', description: 'Top creators sharing tips', online: 234 },
-  { id: 2, name: 'Tech & Toys', members: '28K', description: 'Device discussions & reviews', online: 156 },
-  { id: 3, name: 'New Explorers', members: '67K', description: 'Beginners welcome here', online: 892 },
+  { id: 1, name: 'Independent Creators', members: '45K', description: 'Share your work and get feedback', online: 234 },
+  { id: 2, name: 'Cinematography', members: '28K', description: 'Discuss lighting, angles, and mood', online: 156 },
+  { id: 3, name: 'New Releases', members: '67K', description: 'First looks and premieres', online: 892 },
 ]
 
 const featuredContent = [
-  { id: 101, title: 'Midnight Symphony', creator: 'Luna Eclipse', views: '156K', duration: '32:15', likes: '24K', description: 'An immersive journey through the senses' },
-  { id: 102, title: 'Velvet Dreams Collection', creator: 'Scarlet Rose', views: '98K', duration: '45:00', likes: '18K', description: 'Premium exclusive series' },
-  { id: 103, title: 'Electric Paradise', creator: 'Neon Vixen', views: '234K', duration: '28:30', likes: '32K', description: 'Award-winning experience' },
-  { id: 104, title: 'Golden Hour Special', creator: 'Amber Sky', views: '87K', duration: '38:45', likes: '15K', description: 'Limited time feature' },
-  { id: 105, title: 'Silk Whispers', creator: 'Velvet Dreams', views: '112K', duration: '26:20', likes: '19K', description: 'Most anticipated release' },
+  { id: 101, title: 'The Last Train', creator: 'Passion Arts Studio', views: '156K', duration: '32:15', likes: '24K', description: 'Two strangers share an unforgettable journey through the French countryside' },
+  { id: 102, title: 'Canvas', creator: 'julia_sweet', views: '98K', duration: '45:00', likes: '18K', description: 'An artist finds inspiration in her newest muse. Stunningly shot in natural light.' },
+  { id: 103, title: 'After the Party', creator: 'tom_and_lisa', views: '234K', duration: '28:30', likes: '32K', description: 'The night continues after everyone else has gone home' },
+  { id: 104, title: 'Silk', creator: 'Midnight Media', views: '87K', duration: '38:45', likes: '15K', description: 'Elegance and desire intertwine in this visually stunning piece' },
+  { id: 105, title: 'The Weekend', creator: 'naturallove_couple', views: '112K', duration: '26:20', likes: '19K', description: 'A couple escapes to the coast. Intimate and beautifully composed.' },
 ]
 
 // Content Card Component
@@ -70,11 +79,10 @@ function ContentCard({ item }: { item: typeof mockContent[0] }) {
         border: '1px solid rgba(255,255,255,0.08)',
       }}>
         <Image 
-          src={`/thumbn/${item.id}.jpg`}
+          src={getThumbnail(item.id)}
           alt={item.title}
           fill
           style={{ objectFit: 'cover' }}
-          onError={(e) => { e.currentTarget.style.display = 'none' }}
         />
         
         {/* Play overlay */}
@@ -136,10 +144,20 @@ function ContentCard({ item }: { item: typeof mockContent[0] }) {
           color: '#C9A962',
           fontSize: '0.85rem',
           fontWeight: 500,
-          marginBottom: '10px',
+          marginBottom: '6px',
           fontFamily: 'Inter, sans-serif'
         }}>
           {item.creator}
+        </p>
+        
+        <p className="line-clamp-1" style={{
+          color: 'rgba(255,255,255,0.5)',
+          fontSize: '0.8rem',
+          marginBottom: '10px',
+          fontFamily: 'Inter, sans-serif',
+          lineHeight: 1.4
+        }}>
+          {item.description}
         </p>
         
         <div style={{
@@ -561,11 +579,10 @@ function FeaturedCarousel() {
               border: '1px solid rgba(255,255,255,0.08)',
             }}>
               <Image 
-                src={`/thumbn/${item.id}.jpg`}
+                src={getThumbnail(item.id)}
                 alt={item.title}
                 fill
                 style={{ objectFit: 'cover' }}
-                onError={(e) => { e.currentTarget.style.display = 'none' }}
               />
               
               {/* Play overlay */}
