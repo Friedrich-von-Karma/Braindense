@@ -9,10 +9,10 @@
   --violet-mid: #1A0030;
   --violet-bright: #8F3FD4;
   --violet-glow: #B06AF5;
-  --black: #050508;
-  --surface: #0F0518;
-  --surface-2: #1A0828;
-  --white: #FAFAFA;
+  --black: #000000;
+  --surface: #0A0A0A;
+  --surface-2: #111111;
+  --white: #FFFFFF;
 }
 
 * {
@@ -24,14 +24,14 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background-color: var(--black);
+  background-color: #000000;
   color: var(--white);
   font-family: 'Syne', sans-serif;
   overflow-x: hidden;
 }
 
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: #000000; }
 ::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 2px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
 
