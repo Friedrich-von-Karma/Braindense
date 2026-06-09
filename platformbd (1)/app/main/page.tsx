@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Search, User, Bell, Mail, Library, Menu, X, Play, Gamepad2, Film, AppWindow, Music, BookOpen, Sparkles, Heart, Eye, Users, MessageCircle, Clock, TrendingUp, Star, ChevronRight, Upload, Settings, History, Bookmark, Flame, Zap, ChevronLeft } from 'lucide-react'
 
 const categories = [
@@ -1018,7 +1019,8 @@ export default function MainPage() {
               )
             })}
             
-            <button 
+            <Link
+              href="/profile"
               title="Profile" 
               style={{
                 background: 'linear-gradient(135deg, #9B6DFF 0%, #C9A962 100%)',
@@ -1035,7 +1037,7 @@ export default function MainPage() {
               }}
             >
               <User size={18} strokeWidth={1.5} />
-            </button>
+            </Link>
           </div>
         </div>
       </header>
