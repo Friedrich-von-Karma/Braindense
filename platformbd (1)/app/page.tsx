@@ -51,22 +51,46 @@ export default function LandingPage() {
         padding: '48px',
         maxWidth: '600px'
       }}>
-        {/* Logo container */}
+        {/* Logo container - Heart shape */}
         <div style={{ marginBottom: '64px' }}>
           <div style={{
-            background: '#FFFFFF',
-            borderRadius: '12px',
-            padding: '40px 56px',
-            boxShadow: '0 0 80px rgba(255,255,255,0.08)',
+            position: 'relative',
+            width: '240px',
+            height: '220px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
           }}>
-            <Image 
-              src="/images/logo.png" 
-              alt="BlackDesire" 
-              width={280} 
-              height={140}
-              style={{ objectFit: 'contain' }}
-              priority
-            />
+            {/* Heart shape using CSS */}
+            <svg 
+              viewBox="0 0 32 29.6" 
+              style={{
+                position: 'absolute',
+                width: '100%',
+                height: '100%',
+                filter: 'drop-shadow(0 0 60px rgba(255,255,255,0.15))',
+              }}
+            >
+              <path 
+                fill="#FFFFFF" 
+                d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"
+              />
+            </svg>
+            {/* Logo on top */}
+            <div style={{
+              position: 'relative',
+              zIndex: 10,
+              marginTop: '-10px',
+            }}>
+              <Image 
+                src="/images/logo.png" 
+                alt="BlackDesire" 
+                width={140} 
+                height={70}
+                style={{ objectFit: 'contain' }}
+                priority
+              />
+            </div>
           </div>
         </div>
 
